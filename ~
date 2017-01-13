@@ -1,0 +1,6 @@
+from pyknp import Jumanpp
+jumanapp = Jumanpp()
+
+j = jumanapp.analysis("ケーキを食べる")
+
+
