@@ -31,3 +31,17 @@ j = jumanapp.analysis("お腹すいたよ。なんか、代官山でレストラ
 food_morphemes = [morpheme.midasi for morpheme in j.mrph_list() if "食べ物" in morpheme.imis]
 print(food_morphemes)
 
+print("\n------------------------------------------------------")
+print("Filter food words:")
+print("------------------------------------------------------")
+j = jumanapp.analysis("お腹すいたよ。なんか、代官山でレストラン探してくれないのかい〜寿司,焼肉、アップル、りんご、ワイン、オレンジ、滑子")
+food_morphemes = [morpheme for morpheme in j.mrph_list() if "食べ物" in morpheme.imis]
+
+for food in food_morphemes:
+	print(food.midasi)
+	print(food.imis)
+
+
+
+
+
